@@ -1,0 +1,33 @@
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: copy-git-repo-pipeline2
+spec:
+  params:
+#  - name: git-source-repo 
+#  - name: git-dest-repo 
+#  - name: script-dev-to-prod 
+  workspaces:
+  - name: source 
+  - name: input  
+  tasks:
+  - name: copy-files-from-git-source-repo-to-git-dest-repo
+    taskRef:
+      name: git-cli
+      kind: ClusterTask
+    workspaces:
+      - name: source 
+        workspace: source  
+      - name: input 
+        workspace: input
+
+    params: 
+    - name: GIT_SCRIPT
+      value: |
+        git init
+        git remote add origin https://github.com/simonDelordtest/dev-cluster.git
+        git pull origin master
+        git remote remove origin
+        git remote add origin https://github.com/simonDelordtest/prod-cluster.git
+        git push https://simonDelordtest:simondelord1@github.com/simonDelordtest/prod-cluster.git
