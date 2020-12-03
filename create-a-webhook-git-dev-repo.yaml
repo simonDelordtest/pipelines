@@ -8,5 +8,5 @@ spec:
       image: fedora
       script: |
         #!/usr/bin/env bash
-        curl -u 'simonDelordtest:dcf32871b96c93794ed0de4d35459914109855fe' -H "Content-Type: application/json" -X POST -d '{"config":{"url":"http://git-dev-app1-listener-default.apps.ocpbare.melbourneocp.net", "content_type":"json"}}' https://api.github.com/repos/simonDelordtest/dev-repo-app1/hooks
+        curl -u 'simonDelordtest:136f9f506e4a260de05b933d23c5aecf7834834c' -H "Content-Type: application/json" -X POST -d '{"config":{"url":"http://git-dev-app1-listener-default.apps.ocpbare.melbourneocp.net", "content_type":"json"}}' https://api.github.com/repos/simonDelordtest/dev-repo-app1/hooks
 
