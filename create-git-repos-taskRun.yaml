@@ -1,7 +1,0 @@
-apiVersion: tekton.dev/v1beta1
-kind: TaskRun
-metadata:
-  name: create-git-repo-task-run
-spec:
-  taskRef:
-    name: create-git-repos-task 
