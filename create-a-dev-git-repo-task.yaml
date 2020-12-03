@@ -8,5 +8,5 @@ spec:
       image: fedora
       script: |
         #!/usr/bin/env bash
-        curl -u 'simonDelordtest:f6c80580cdb018d5d004f45265ab7277e66caecf' https://api.github.com/user/repos -d '{"name":"dev-repo-app1"}'
+        curl -u 'simonDelordtest:dcf32871b96c93794ed0de4d35459914109855fe' https://api.github.com/user/repos -d '{"name":"dev-repo-app1"}'
 
